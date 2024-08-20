@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YesCoin Autoclicker
 // @namespace    Violentmonkey Scripts
-// @version      1.0
+// @version      1.1
 // @description  Автоматический сборщик монет для YesCoin
 // @match        *://*.yescoin.gold/*
 // @author       mudachyo
@@ -80,7 +80,7 @@ const initializeScript = async () => {
         });
 
         const getEnergyValue = () => {
-            const energyElement = document.querySelector('.progress-value');
+            const energyElement = document.querySelector('.coin-pool');
             return energyElement ? parseInt(energyElement.textContent, 10) : 0;
         };
 
